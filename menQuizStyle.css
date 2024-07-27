@@ -1,0 +1,443 @@
+/*"Poetsen One"*/
+/*
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poetsen One", sans-serif;
+  background-color: #f4f4f4;
+}
+
+button {
+  font: inherit;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+}
+
+/*section 1*/
+
+.block-1 {
+  overflow: auto;
+  width: 80%;
+  height: 100vh;
+}
+
+.block-1 .h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-decoration: underline;
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid #000;
+  padding-bottom: 20px;
+}
+
+.block-1 .app {
+  margin: 20px 5px 15px 50px;
+  height: auto;
+}
+
+.block-1 .app .h2 {
+  margin: 8px;
+  font-weight: 700;
+  font-size: 2.3rem;
+  letter-spacing: 0.01em;
+}
+
+.block-1 .app .h2::after {
+  content: "❓";
+}
+
+.block-1 .app .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: auto;
+}
+
+.block-1 .app .btns button {
+  margin: 11px 2px;
+  padding: 8px 65px;
+  width: 60%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 12px;
+  background: rgb(50, 72, 242);
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  box-shadow: 2px 3px 5px #001;
+  transition: 500ms ease-in-out;
+}
+
+.block-1 .app .btns button:hover:not([disabled]) {
+  background: #000080;
+  transform: scale(1.2);
+}
+
+.block-1 .optionsSelect {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-1 .optionsSelect button {
+  flex-flow: row wrap;
+  flex: 0 0 65px;
+  text-align: center;
+  padding: 8px 9px;
+  font-size: 1.6rem;
+  width: 4.252%;
+  font-weight: 700;
+  margin: 7px 6px;
+  border: none;
+  background: rgb(6, 6, 99);
+  color: #f4f4f4;
+  cursor: pointer;
+  border-radius: 11px;
+  transition: 500ms ease-in-out;
+}
+
+.block-1 .optionsSelect button:hover:not([disabled]) {
+  background: #00f;
+  transform: scale(1.3);
+}
+.block-1 .app .btns button.selected {
+  background-color: #0056b3;
+}
+.block-1 .app .btns button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.block-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 19.5%;
+  height: 100vh;
+  border-left: 1.2px solid #000;
+  text-align: center;
+  padding-top: 30px;
+  background-color: #ffffff;
+}
+
+.block-2 figure {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+  margin-left: 10px;
+}
+.block-2 figure img {
+  width: 100%;
+  height: auto;
+  cursor: grab;
+  animation: img 5s ease-in-out infinite both;
+}
+
+@keyframes img {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.block-2 .eci {
+  font-weight: 700;
+  font-size: 4vmin;
+}
+
+.block-2 h3 {
+  color: rgb(26, 104, 26);
+  font-size: 2rem;
+  margin: 11px auto;
+  font-weight: 700;
+}
+
+.block-2 h4 {
+  color: rgb(2, 14, 26);
+  font-size: 2rem;
+  margin: 11px auto;
+  font-weight: 700;
+}
+
+/*JS codes*/
+
+.selected {
+  background-color: yellow;
+}
+.correct {
+  background-color: green;
+}
+.incorrect {
+  background-color: red;
+}
+
+.dis {
+  background: red;
+  cursor: no-drop;
+}
+
+
+/*Index page */
+
+.index {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+
+.index-home {
+  flex-flow: column wrap;
+  width: 98%;
+  height: 75vh;
+  flex:1 0 100px ;
+}
+
+.index-home figure{
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.index-home figure .img{
+  text-align: center;
+  width: 180px;
+  height: auto;
+  margin: 20px;
+}
+
+.index-home figure .img img{
+  width: 100%;
+  height: auto;
+}
+
+.index-home figure figcaption {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 22px;
+}
+
+.index-home figure figcaption h2 {
+  color: #111;
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 7vmin;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.index-home figure figcaption h3 {
+  margin: 30px;
+  color: rgb(16, 107, 16);
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 8vmin;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.index-home figure figcaption .c {
+  margin: 10px;
+  color: rgb(13, 14, 13);
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 5vmin;
+  font-weight: 700;
+}
+
+.index-home figure figcaption .c::after  {
+ content: '👇';
+}
+
+.index-home .tes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.index-home .tes a {
+  padding: 20px 56px;
+  background: rgb(85, 23, 218);
+  color: #ccc;
+  text-align: center;
+  border-radius: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 500ms;
+  font-size: 5vmin;
+}
+
+.index-home .tes a:hover {
+  background: rgb(21, 3, 95);
+  animation: shake 2s ease-in-out infinite both;
+}
+
+@keyframes shake {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px , 2px);
+    }
+    40% {
+      transform: translate(-2px , -2px);
+    }
+    60% {
+      transform: translate(2px , 2px);
+    }
+    80% {
+      transform: translate(2px , -2px);
+    }
+    0% {
+      transform: translate(0) scale(1.2);
+    }
+}
+
+/*Heading on the quiz */
+
+.eci-top {
+  display: none;
+}
+
+/*|| media screens*/
+
+
+/*|| small laptop */
+
+@media screen and (max-width: 1110px ) {
+  main {
+    display: block;
+    flex-direction: column;
+    flex: 1 1 250px;
+    position: relative;
+    margin-bottom: 450px;
+  }
+
+  .block-1 {
+    width: 100%;
+    position: relative;
+    overflow: none;
+  }
+
+  .block-2 {
+    display: none;
+  }
+
+  .eci-top {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    background: #fff;
+    clear: both;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .eci-top figure {
+    margin: 15px 5px;
+    width: 80px;
+    height: auto;
+    display: block;
+  }
+
+  .eci-top figure img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .eci-top h2{
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: .1em;
+    color: #121;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vmin;
+  }
+
+  
+}
+
+@media screen and (max-width: 610px ) {
+
+  .block-1 .h1 {
+    font-size: 2rem;
+  }
+
+  .block-1 .app .h2 {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .block-1 .app .btns {
+    text-align: center;
+  }
+
+  .block-1 .app {
+    margin: 10px 8px;
+    height: auto;
+  }
+  
+.block-1 .app .btns button {
+  margin: 8px 2px;
+  padding: 11px 45px;
+  width: 80%;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+ }
+
+ .block-1 .optionsSelect {
+  padding: 5px;
+  width: 100%;
+ }
+
+}
+
