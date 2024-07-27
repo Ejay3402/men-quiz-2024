@@ -497,7 +497,7 @@ const deselectedAnswer = () => {
 // Select answer function
 const selectAnswer = (answer, i) => {
   if (currentQuestionIndex < 0) {
-    alert(`Pick a question from 1 - 30`);
+    alert(`Pick a question from 1 - 40`);
     return;
   }
 
